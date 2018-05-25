@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Fri May 25 2018 15:11:36 GMT+0530 (India Standard Time) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="feedback_form">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="form1">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="feedback_id" type="xs:int"></xs:element>
+                                                 <xs:element name="cust_id" type="xs:int"></xs:element>
+                                                 <xs:element name="vehicle_no" type="xs:string"></xs:element>
+                                                 <xs:element name="vehicle_type" type="xs:string"></xs:element>
+                                                 <xs:element name="service_date" type="xs:string"></xs:element>
+                                                 <xs:element name="rating_number" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="form2">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="feedback_id" type="xs:int"></xs:element>
+                                                 <xs:element name="cust_id" type="xs:int"></xs:element>
+                                                 <xs:element name="vehicle_no" type="xs:string"></xs:element>
+                                                 <xs:element name="vehicle_type" type="xs:string"></xs:element>
+                                                 <xs:element name="service_date" type="xs:string"></xs:element>
+                                                 <xs:element name="rating_number" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="form3">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="feedback_id" type="xs:int"></xs:element>
+                                                 <xs:element name="cust_id" type="xs:int"></xs:element>
+                                                 <xs:element name="vehicle_no" type="xs:string"></xs:element>
+                                                 <xs:element name="vehicle_type" type="xs:string"></xs:element>
+                                                 <xs:element name="service_date" type="xs:string"></xs:element>
+                                                 <xs:element name="rating_number" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="form4">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="feedback_id" type="xs:int"></xs:element>
+                                                 <xs:element name="cust_id" type="xs:int"></xs:element>
+                                                 <xs:element name="vehicle_no" type="xs:string"></xs:element>
+                                                 <xs:element name="vehicle_type" type="xs:string"></xs:element>
+                                                 <xs:element name="service_date" type="xs:string"></xs:element>
+                                                 <xs:element name="rating_number" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="form5">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="feedback_id" type="xs:int"></xs:element>
+                                                 <xs:element name="cust_id" type="xs:int"></xs:element>
+                                                 <xs:element name="vehicle_no" type="xs:string"></xs:element>
+                                                 <xs:element name="vehicle_type" type="xs:string"></xs:element>
+                                                 <xs:element name="service_date" type="xs:string"></xs:element>
+                                                 <xs:element name="rating_number" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="form6">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="feedback_id" type="xs:int"></xs:element>
+                                                 <xs:element name="cust_id" type="xs:int"></xs:element>
+                                                 <xs:element name="vehicle_no" type="xs:string"></xs:element>
+                                                 <xs:element name="vehicle_type" type="xs:string"></xs:element>
+                                                 <xs:element name="service_date" type="xs:string"></xs:element>
+                                                 <xs:element name="rating_number" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                     <xs:attribute name="xsi:noNamespaceSchemaLocation" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
