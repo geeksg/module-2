@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- definition of simple elements -->
+
+	<xs:element name="fed_id" type="xs:integer" />
+	<xs:element name="cust_id" type="xs:integer" />
+
+	<!-- restrictions to elements -->
+
+	<xs:element name="ve_no" type="xs:string" >
+		<xs:simpleType>
+			<xs:restriction base="string">
+				<xs:pattern="[A-Z][0-9]">
+			</xs:restriction>
+		<xs:simpleType/>
+	
+	<xs:element name="ve_type" type="xs:string" />
+	<xs:element name="se_da" type="xs:date" />
+	<xs:element name="rat" type="xs:integer" />
+
+	<!-- definition of complex elements -->
+
+	<xs:element name="feedback">
+	  	<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fed_id" />
+				<xs:element ref="cust_id" />
+				<xs:element ref="ve_no" />
+				<xs:element ref="ve_type" />
+				<xs:element ref="se_da" />
+				<xs:element ref="rat" />
+			</xs:sequence>	
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="table">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="feedback" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
