@@ -1,0 +1,29 @@
+function bill()
+{
+
+	var customer_name = document.forms["Form1"].elements["select1"].value
+	var cname = document.forms["Form1"].elements["name1"].value
+	var bill=0;
+	var type_of_vehicle = document.forms["Form1"].elements["vehicle_type"].value
+	var cost_of_vehicle = document.forms["Form1"].elements["cost"].value
+	if(document.forms["Form1"]["check1"].checked==true)
+	{
+		alert("Thanks for your Visit "+ customer_name+cname+"." +"Your Final bill is 200" );
+		return false;
+	}
+	if(type_of_vehicle=="Hatchback")
+		{
+			bill=cost_of_vehicle*0.15;
+		}
+		else if(type_of_vehicle=="Small Car")
+		{
+			bill=cost_of_vehicle*0.10;
+		}
+		else if(type_of_vehicle=="Sedan")
+		{
+			bill=cost_of_vehicle*0.18;
+		}
+	alert("Thanks for your Visit "+ customer_name+cname+"." +"Your Final bill is"+bill );
+		
+}
+	
