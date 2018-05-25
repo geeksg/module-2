@@ -1,0 +1,77 @@
+/*********************************************************************
+ * File                 : 
+ * Author Name          : 
+ * Description          : 
+ * Version              : 1.0
+ * Last Modified Date   : 25/05/2018
+ *********************************************************************/
+ 
+BEGIN
+	DECLARE typeOfVehicle AS INTEGER
+	DECLARE costOfVehicle AS REAL
+	DECLARE typeOfService AS INTEGER
+	PROMPT "Select The Type of vehicle: 1.Hatchback 2.small cars 3.Sedan" AND STORE IN typeOfVehicle
+
+	IF(typeOfVehicle==1 || typeOfVehicle==2 || typeOfVehicle==3) THEN		\\Checking for valid vehicle type
+		CONTINUE
+	ELSE
+		PRINT "Give a valid Vehicle type"
+	END IF
+
+	PROMPT "Enterthe cost of the vehile" AND STORE IN costOfVehicle
+	PROMPT "Select Type of service: 1.Free service 2.Body Repair" AND STORE IN typeOfService
+
+	IF(typeOfService==1||typeOfService==2) THEN					\\Checking for valid Service type
+		CONTINUE
+	ELSE
+		PRINT "Select a valid vehicle type"
+	END IF
+
+	IF(typeOfService==1)
+	{
+		PRINT "Cost of service is 200"						\\Bill for free service
+	}
+	Else
+	{
+		PRINT "Cost ofservice is" +calBill(typeOfVehicle,costOfVehicle)		\\Bill for Body Repair
+	}
+END
+/*********************************************************************
+* Module Name         : calBill()
+* Input Parameters    : typeOfVehicle,costOfVehicle
+* Return Type         : INTEGER
+* Author              : 
+* Creation Date       : 25/05/2018
+* Description         : calculating bill
+ *********************************************************************/
+
+SUB calBill(typeOfVehicle,costOfVehicle)
+	DECLARE HATCH_BACK AS CONSTANT INTEGER
+	DECLARE SMALL_CARS AS CONSTANT INTEGER
+	DECLARE SEDAN AS CONSTANT INTEGER
+	DECLARE bill AS INTEGER
+
+	INITIALISE HATCH_BACK = 0.15
+	INITIALISE SMALL_CARS = 0.10
+	INITIALISE SEDAN = 0.18
+
+	IF (costOfVehicle<=0) THEN					//checking for invalid cost
+
+		RAISE invalidCost "Give Valid cost of the vehicle"	//Raising the exception
+
+	ELSE IF (typeOfVehicle==1) THEN					
+		bill=costOfVehicle*HATCH_BACK
+		RETURN bill
+	ELSE IF (typeOfVehicle==2) THEN
+		bill=costOfVehicle*SMALL_CARS;
+		RETURN bill
+	ELSE 
+		bill=costOfVehicle*SEDAN;
+		RETURN bill
+	END IF
+	
+	EXCEPTION							//Exception Handling
+		WHEN invalidCost THEN
+			PRINT errormessage
+END SUB
+
