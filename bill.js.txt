@@ -1,0 +1,32 @@
+function cal()
+{
+	
+	if(document.forms["Form1"]["check1"].checked==false && document.forms["Form1"]["check2"].checked==false)
+	{
+	alert("select type of service");
+	return false;
+	}
+	if(document.forms["Form1"]["check1"].checked==true)
+	{
+	alert("bill is 200");
+	}
+	/*else if(document.forms["Form1"]["check2"].checked==true)
+	{
+		var bill=0;
+		var cost=getElementById["cost"].value;
+		var a=getElementById["vehicle"].value;
+		if(a=="Hatchback")
+		{
+			bill=cost*0.15;
+		}
+		else if(a=="Small Car")
+		{
+			bill=cost*0.10;
+		}
+		else if(a=="Sedan")
+		{
+			bill=cost*0.18;
+		}	
+		alert("bill is "+bill);	
+	}*/
+}
