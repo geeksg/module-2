@@ -1,0 +1,81 @@
+<!DOCCTYPE HTML>
+<html>
+	<head>
+		<title> Billing Form</title>
+		
+		<!--<link href="electricity.css" rel="stylesheet" type="text/css"-->
+	               
+		<script type="text/javascript" src="bill.js"></script>-->
+		
+	</head>
+	<body>
+	<form method ="post" name="Form1" onsubmit="cal()">
+		<table align =center border=5 rules="none" cellpadding=5px >
+		<tr>
+			<td  colspan=2 align=center><h2>Billing Form</h2></td>
+		</tr>
+		<tr>
+			<td>Name:<span style="color:red">*</span></td>
+			<td><select name="select1" required id="title"> 
+				<option value="c1">Mr.</option>
+				<option value="c1">Mss.</option>
+				<option value="c1">Ms.</option>
+				<option value="c1">Dr.</option>
+			<input type="text"  title="Abc" pattern="[A-Za-z]{5,}" name="name" id="name" required></td>
+		</tr>
+		
+		<tr>
+			<td>Address:<span style="color:red;">*</span></td>
+			<td><input type="text" name="name" id="name" required></td>
+		</tr>
+		
+		<tr>
+			<td>Mobile Number:<span style="color:red">*</span></td>
+			<td><input type="text" pattern="[0-9]{10}" title="1234567890" name="mobile" id="mobile" required></td>
+		</tr>
+		
+		<tr>
+			<td>Email ID:<span style="color:red">*</span></td>
+			<td><input type="email" name="mail" id="mail" title="abc@xyz.com" required></td>
+		</tr>
+			
+		<tr>
+		<td>Select Car Model<span style="color:red">*</span></td>
+			<td><select name="select2" id="vehicle"> 
+				<option >All</option>
+				<option >Hatchback</option>
+				<option >Small Car</option>
+				<option >Sedan</option>
+			</td>
+		</tr>
+	
+	<tr>
+	 <td colspan=2> <table border=1 rules=none align=center  width=350> 
+			<tr><td> Type of Service Taken<span style="color:red">*</span></td>
+			<td></td>
+			</tr>
+			<tr>
+			<td><input type=checkbox name=chk1 id=check1 > Free Service</td>
+			<td><input type=checkbox name=chk1 id=check2 > Body Repair</td>
+			</tr>
+			
+		</table>
+	 </td>
+	</tr>
+	
+		<tr>
+			<td>Cost of the Vehicle:<span style="color:red">*</span></td>
+			<td><input type="text" name="cost" id="cost" required></td>
+		</tr>
+
+	
+		
+		<tr>
+			<td align=center><input type="submit" name="calc" value=Submit></td>
+			<td align=center><input type="reset" name="calc" value=Cancel></td>
+		</tr>
+		
+		</table>
+		 </form>
+	</body>
+</html>
